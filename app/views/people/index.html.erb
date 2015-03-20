@@ -2,7 +2,7 @@
 
 <h1>Listing People</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -14,7 +14,9 @@
   <tbody>
     <% @people.each do |person| %>
       <tr>
-        <td><%= person.name %></td>
+        <td>
+          <span data-toggle="popover"><%= person.name %></span>
+        </td>
         <td><%= person.date_of_birth %></td>
         <td><%= link_to 'Show', person %></td>
         <td><%= link_to 'Edit', edit_person_path(person) %></td>
