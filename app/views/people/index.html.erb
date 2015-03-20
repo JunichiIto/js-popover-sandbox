@@ -15,9 +15,7 @@
     <% @people.each do |person| %>
       <tr>
         <td>
-          <%= content_tag :span, data: { toggle: :popover, content: l(person.date_of_birth), placement: :bottom } do %>
-            <%= person.name %>
-          <% end %>
+          <%= content_tag :span, person.name, data: { toggle: :popover, content: l(person.date_of_birth), placement: :bottom } %>
         </td>
         <td><%= person.date_of_birth %></td>
         <td><%= link_to 'Show', person %></td>
