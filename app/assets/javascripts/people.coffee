@@ -2,7 +2,4 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
-  $('[data-toggle="popover"]').popover
-    html: true
-    placement: 'bottom'
-    content: 'Hello'
+  $('[data-toggle="popover"]').popover()
